@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Aayisha ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PASSWORD SCRIPT -->
+<script>
+  const SITE_PASSWORD = "aayisha2801";
+  const entered = prompt("This page is private 🤍\nPlease enter the password:");
+
+  if (entered !== SITE_PASSWORD) {
+    document.documentElement.innerHTML = `
+      <body style="display:flex;align-items:center;justify-content:center;height:100vh;
+      background:#fdecef;font-family:Playfair Display,serif;text-align:center;">
+        <div>
+          <h2 style="color:#c84d6f;">Access Denied</h2>
+          <p style="color:#7a3d57;">This page is private 🤍</p>
+        </div>
+      </body>
+    `;
+  }
+</script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html, body{
+  width:100%;
+  height:100%;
+}
+
+body{
+  overflow:hidden;
+  font-family:'Playfair Display', serif;
+}
+
+/* COMMON PAGE STYLE */
+.page{
+  display:none;
+  width:100%;
+  height:100vh;
+  position:absolute;
+  top:0;
+  left:0;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+}
+
+.active{
+  display:flex;
+}
+
+/* TEXT ANIMATION */
+.animate{
+  opacity:0;
+  animation:riseFade 1.6s ease forwards;
+}
+
+.delay-1{ animation-delay:.2s; }
+.delay-2{ animation-delay:.4s; }
+.delay-3{ animation-delay:.6s; }
+.delay-4{ animation-delay:.8s; }
+
+@keyframes riseFade{
+  from{
+    opacity:0;
+    transform:translateY(35px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* PAGE 1 */
+#page1{
+  background:url('ok (1).png') no-repeat center/cover;
+  color:#fff;
+}
+
+#overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.2);
+}
+
+#center-content{
+  position:relative;
+  z-index:2;
+}
+
+#page1 h1{
+  font-size:3rem;
+  color:#ff4d6d;
+}
+
+#page1 p{
+  font-size:1.2rem;
+}
+
+.heart{
+  font-size:3rem;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.2);}
+}
+
+button{
+  margin-top:20px;
+  padding:15px 35px;
+  font-size:1.1rem;
+  border:none;
+  border-radius:50px;
+  background:#ff4d6d;
+  color:#fff;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+/* PAGE 2 */
+#page2{
+  background:url('2nd.png') no-repeat center/cover;
+  background-color:#fdecef;
+}
+
+.page2-title{
+  font-family:'Great Vibes', cursive;
+  font-size:72px;
+  color:#c84d6f;
+}
+
+.page2-subtitle{
+  font-family:'Allura', cursive;
+  font-size:42px;
+  color:#b04663;
+}
+
+.page2-message{
+  font-size:20px;
+  color:#7a3d57;
+  max-width:520px;
+  margin:20px auto 40px;
+}
+
+/* SOFT PAGES (FULL SCREEN FIX) */
+.soft-page{
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  background-color:#fdecef;
+  width:100%;
+  height:100vh;
+}
+
+.overlay-box{
+  background:rgba(255,255,255,0.6);
+  padding:45px 55px;
+  border-radius:22px;
+  max-width:650px;
+  backdrop-filter:blur(6px);
+}
+
+.quote{
+  font-size:26px;
+  color:#7a3d57;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
+.next-btn{
+  padding:12px 38px;
+  background:#e66a8d;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.next-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* FINAL PAGE */
+#page6{
+  background-size:cover !important;
+  background-position:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .page2-title{font-size:50px;}
+  .page2-subtitle{font-size:32px;}
+  .quote{font-size:22px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <div id="overlay"></div>
+  <div id="center-content">
+    <h1 class="animate delay-1">Today Is All About You ✨</h1>
+    <p class="animate delay-2">A little surprise, made with all my heart 💖</p>
+    <div class="heart animate delay-3">❤️</div>
+    <button class="animate delay-4" onclick="goToPage(2)">Tap the Heart💗</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <div>
+    <div class="page2-title animate delay-1">Happy Birthday</div>
+    <div class="page2-subtitle animate delay-2">dear</div>
+    <div class="page2-message animate delay-3">
+      Wishing the girl who's special and amazing for me
+    </div>
+    <button class="next-btn animate delay-4" onclick="goToPage(3)">Next</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page soft-page" id="page3" style="background-image:url('3rd page.png');">
+  <div class="overlay-box">
+    <p class="quote animate delay-1">
+      I hope to enjoy life with you in my twenties and thirties,<br>
+      and with Allah’s will, in every chapter that follows
+    </p>
+    <button class="next-btn animate delay-2" onclick="goToPage(4)">Next</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page soft-page" id="page4" style="background-image:url('4th page.png');">
+  <div class="overlay-box">
+    <p class="quote animate delay-1">
+      I really want you in my dunya and my akhirah,<br>
+      trusting Allah to guide us toward what is meant to be.
+    </p>
+    <button class="next-btn animate delay-2" onclick="goToPage(5)">Next 💗</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page soft-page" id="page5" style="background-image:url('5th bg.png');">
+  <div class="overlay-box">
+    <p class="quote animate delay-1">
+      Aayisha 🌸<br>
+      You are a blessing I thank Allah for,<br>
+      a peace my heart recognizes,<br>
+      and a dua I hold close
+    </p>
+    <button class="next-btn animate delay-2" onclick="goToPage(6)">Final Page 🤍</button>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page soft-page" id="page6" style="background-image:url('6th.png');">
+  <div class="overlay-box">
+    <p class="quote animate delay-1">
+      If Allah has written us together,<br>
+      Then every step will lead us closer.<br><br>
+      Happy Birthday Aayisha 💞
+    </p>
+    <button class="next-btn animate delay-2" onclick="goToPage(1)">Start Again ♾️</button>
+  </div>
+</div>
+
+<script>
+function goToPage(num){
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+    p.querySelectorAll('.animate').forEach(el=>{
+      el.style.animation='none';
+      el.offsetHeight;
+      el.style.animation='';
+    });
+  });
+  document.getElementById('page'+num).classList.add('active');
+}
+</script>
+
+</body>
+</html>
